@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const sayfa2 = document.getElementById("sayfa2");
     const tablolar = document.getElementById("tablo");
     const geriButton = document.getElementById("geriButton");
+    const sonuc = document.getElementById("sonuc");
 
     form.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     hesaplaButton.addEventListener("click", () => {
         maxdegerler();
+        // sonuc.innerHTML=`>Èn büyük değer:${enmaxdeger} , Verilen iyimser karar sonucu: ${enmaxSecenek}`;
     });
 
     function createTable(rows, columns) {
@@ -33,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let i = 0; i < columns; i++) {
             tableHTML += `
                 <th>
-                    ${i + 1}. Doğal Şart 
+                    ${i + 1}. Doğal Durum 
                     (<input type="text" class="header-input" placeholder="Metin girin">)
                 </th>`;
         }
@@ -78,6 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const enmaxdeger = Math.max(...maxValues);
             const enmaxIndex = maxValues.indexOf(enmaxdeger);
             const enmaxSecenek = maxSecenek[enmaxIndex];
-            alert(`Her satırdaki en büyük sayılar: ${maxValues.join(", ")}\nEn büyük değer: ${enmaxdeger}\nBu değer "${enmaxSecenek}" seçeneğine aittir.` );
+            //alert(`Her satırdaki en büyük sayılar: ${maxValues.join(", ")}\nEn büyük değer: ${enmaxdeger}\nBu değer "${enmaxSecenek}" seçeneğine aittir.` );
+            sonuc.innerHTML=`<h4>Sonuç: </h4> En büyük değer:${enmaxdeger} , Verilen iyimser karar sonucu: ${enmaxSecenek}`;
+          
     }
 });
