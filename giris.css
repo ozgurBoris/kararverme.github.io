@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Yatay ortalama */
+    align-items: center;   /* Dikey ortalama */
+    text-align: center;
+}
+input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 150px; 
+}
+button{
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+button:hover {
+    background-color: #45a049;
+}
+th {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-weight: bold;
+}
+td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+td:first-child {
+    background-color: #f1f1f1; /* Seçenek sütunu daha farklı bir renkte olsun */
+    font-weight: bold;
+}
